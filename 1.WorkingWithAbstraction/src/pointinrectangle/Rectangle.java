@@ -9,8 +9,16 @@ public class Rectangle {
         this.topRight = topRight;
     }
 
-    public boolean contains(Point point) {
-       //todo
+    public boolean contains(Point toCheck) {
+        if (toCheck.getX() < bottomLeft.getX() || toCheck.getX() > topRight.getX()) {
+            return false;
+        }
+        if (toCheck.getY() < bottomLeft.getY() || toCheck.getY() > topRight.getY()) {
+            return false;
+        }
+
         return true;
     }
+
+
 }
