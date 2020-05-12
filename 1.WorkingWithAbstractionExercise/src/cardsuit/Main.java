@@ -8,5 +8,6 @@ public class Main {
                     suit.ordinal(),
                     suit.name());
         }
+
     }
 }

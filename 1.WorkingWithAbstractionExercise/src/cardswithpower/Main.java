@@ -7,10 +7,11 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) {
         try (BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
-            String rank = bfr.readLine();
-            String suit = bfr.readLine();
+            CardRank rank = CardRank.valueOf(bfr.readLine());
+            CardSuit suit = CardSuit.valueOf(bfr.readLine());
             Card card = new Card(rank, suit);
             System.out.println(card);
+
 
         } catch (IOException e) {
             e.printStackTrace();
