@@ -1,10 +1,9 @@
-package sortbynameandage;
+package employees;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -16,19 +15,26 @@ public class Main {
 
             for (int i = 0; i < numOfInputs; i++) {
                 String[] input = bfr.readLine().split("\\s+");
-                people.add(new Person(input[0],
-                        input[1],
-                        Integer.parseInt(input[2]),
-                        Double.parseDouble(input[3])));
+                try {
+                    people.add(new Person(input[0],
+                            input[1],
+                            Integer.parseInt(input[2]),
+                            Double.parseDouble(input[3])));
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                }
             }
 
 //            Collections.sort(people);
+
 
             double bonus = Double.parseDouble(bfr.readLine());
             for (Person person : people) {
                 person.increaseSalary(bonus);
                 System.out.println(person);
             }
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
