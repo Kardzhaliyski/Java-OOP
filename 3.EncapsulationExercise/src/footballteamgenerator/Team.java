@@ -12,7 +12,7 @@ public class Team {
         this.players = new ArrayList<>();
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("A name should not be empty.");
         }
@@ -29,17 +29,9 @@ public class Team {
     }
 
     public void removePlayer(String playerName) {
-        int playerIndex = -1;
-        for (int index = 0; index < players.size(); index++) {
-            if (players.get(index).getName().equals(playerName)) {
-                playerIndex = index;
-                break;
-            }
-        }
+        boolean playerRemoved = players.removeIf(p -> p.getName().equals(playerName));
 
-        if (playerIndex != -1) {
-            players.remove(playerIndex);
-        } else {
+        if(!playerRemoved) {
             throw new IllegalStateException(String.format(
                     "Player %s is not in %s team.",
                     playerName,
