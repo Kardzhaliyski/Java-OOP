@@ -34,8 +34,7 @@ public class Team {
         if(!playerRemoved) {
             throw new IllegalStateException(String.format(
                     "Player %s is not in %s team.",
-                    playerName,
-                    this.name));
+                    playerName, this.name));
         }
     }
 
