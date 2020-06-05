@@ -4,45 +4,44 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
         try (BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
-            var input = bfr.readLine();
+            var numberOfPeopleToInput = Integer.parseInt(bfr.readLine());
+            Map<String, Buyer> buyers = new HashMap<>();
 
-            List<Birthable> birthable = new ArrayList<>();
-            while (!input.equals("End")) {
-                var tokens = input.split("\\s+");
-
-                switch (tokens[0]) {
-                    case "Citizen": {
-                        birthable.add(new Citizen(
-                                tokens[1],
-                                Integer.parseInt(tokens[2]),
-                                tokens[3],
-                                tokens[4]
-                        ));
-                        break;
-                    }
-                    case "Pet": {
-                        birthable.add(new Pet(
-                                tokens[1],
-                                tokens[2]));
-                        break;
-                    }
+            while (numberOfPeopleToInput-- > 0) {
+                var tokens = bfr.readLine().split("\\s+");
+                if(tokens.length == 3) {
+                    buyers.putIfAbsent(
+                            tokens[0],
+                            new Rebel(tokens[0], Integer.parseInt(tokens[1]), tokens[2]));
+                } else {
+                    buyers.putIfAbsent(
+                            tokens[0],
+                            new Citizen(tokens[0], Integer.parseInt(tokens[1]), tokens[2], tokens[3]));
                 }
-
-                input = bfr.readLine();
             }
 
-            var birthYear = bfr.readLine();
-            birthable.stream()
-                    .filter(b -> b.getBirthDate()
-                    .endsWith(birthYear))
-                    .map(Birthable::getBirthDate)
-                    .forEach(System.out::println);
+            var buyer = bfr.readLine();
+            while (!buyer.equals("End")) {
+                if(buyers.containsKey(buyer)){
+                    buyers.get(buyer).buyFood();
+                }
 
+                buyer = bfr.readLine();
+            }
+
+            var totalBoughtFood = buyers.values().stream()
+                    .map(Buyer::getFood)
+                    .reduce(Integer::sum)
+                    .orElse(0);
+
+            System.out.println(totalBoughtFood);
         } catch (IOException e) {
             e.printStackTrace();
         }
