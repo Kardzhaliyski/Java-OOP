@@ -11,17 +11,22 @@ public class Smartphone implements Callable, Browsable {
         this.urls = urls;
     }
 
-    public boolean canBrowse() {
-        return urls.size() > 0;
-    }
-
     @Override
     public String browse() {
-        String url = urls.get(0);
-        urls.remove(0);
+        StringBuilder sb = new StringBuilder();
 
-        validateUrl(url);
-        return String.format("Browsing: %s!", url);
+        for (String url : urls) {
+            try {
+                validateUrl(url);
+                sb.append(String.format("Browsing: %s!", url))
+                        .append(System.lineSeparator());
+            } catch (IllegalArgumentException e) {
+                sb.append(e.getMessage())
+                        .append(System.lineSeparator());
+            }
+        }
+
+        return sb.toString().trim();
     }
 
     private void validateUrl(String url) {
@@ -30,22 +35,26 @@ public class Smartphone implements Callable, Browsable {
         }
     }
 
-    public boolean canCall() {
-        return this.numbers.size() > 0;
-    }
-
     @Override
     public String call() {
-        String number = numbers.get(0);
-        numbers.remove(0);
+        StringBuilder sb = new StringBuilder();
 
-        validateNumber(number);
+        for (String number : numbers) {
+            try {
+                validateNumber(number);
+                sb.append(String.format("Calling... %s", number))
+                        .append(System.lineSeparator());
+            } catch (IllegalArgumentException e) {
+                sb.append(e.getMessage())
+                        .append(System.lineSeparator());
+            }
+        }
 
-        return String.format("Calling... %s", number);
+        return sb.toString().trim();
     }
 
     private void validateNumber(String number) {
-        if(!number.matches("\\d+")) {
+        if (!number.matches("\\d+")) {
             throw new IllegalArgumentException("Invalid number!");
         }
     }

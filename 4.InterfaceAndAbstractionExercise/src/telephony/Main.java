@@ -17,21 +17,9 @@ public class Main {
 
             Smartphone phone = new Smartphone(numbers, urls);
 
-            while (phone.canCall()) {
-                try {
-                    System.out.println(phone.call());
-                } catch (IllegalArgumentException e ) {
-                    System.out.println(e.getMessage());
-                }
-            }
+            System.out.println(phone.call());
 
-            while (phone.canBrowse()) {
-                try {
-                    System.out.println(phone.browse());
-                } catch (IllegalArgumentException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
+            System.out.println(phone.browse());
 
         } catch (IOException e) {
             e.printStackTrace();
