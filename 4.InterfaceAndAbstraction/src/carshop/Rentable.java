@@ -1,6 +1,6 @@
 package carshop;
 
 public interface Rentable extends Car {
-    Integer getMinimumRentalDays();
+    Integer getMinRentDay();
     Double getPricePerDay();
 }
