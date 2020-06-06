@@ -12,4 +12,10 @@ public class Mission {
     public void completeMission() {
         this.state = MissionState.FINISHED;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Code Name: %s State: %s",
+                this.codeName, this.state.getLable());
+    }
 }
