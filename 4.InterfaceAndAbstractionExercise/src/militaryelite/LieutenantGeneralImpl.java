@@ -1,16 +1,16 @@
 package militaryelite;
 
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
+import militaryelite.interfaces.LieutenantGeneral;
+import militaryelite.interfaces.Private;
 
-public class LieutenantGeneralImpl extends PrivateImpl implements LieutenantGeneral{
+import java.util.*;
+
+public class LieutenantGeneralImpl extends PrivateImpl implements LieutenantGeneral {
     Map<Integer, Private> privates;
 
     public LieutenantGeneralImpl(int id, String firstName, String lastName, double salary) {
         super(id, firstName, lastName, salary);
-        privates = new LinkedHashMap<>();
+        privates = new TreeMap<>(Collections.reverseOrder());
     }
 
 
@@ -20,12 +20,17 @@ public class LieutenantGeneralImpl extends PrivateImpl implements LieutenantGene
     }
 
     @Override
+    public Map<Integer, Private> getPrivates() {
+        return privates;
+    }
+
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString()).append(System.lineSeparator());
         sb.append("Privates:");
         for (Private aPrivate : privates.values()) {
-            sb.append(System.lineSeparator()).append(aPrivate.toString());
+            sb.append(System.lineSeparator()).append("  ").append(aPrivate.toString());
         }
 
         return sb.toString();

@@ -1,11 +1,13 @@
 package militaryelite;
 
+import militaryelite.interfaces.Commando;
+
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class CommandoImpl extends SpecialisedSoldierImpl implements Commando {
-    private Set<Mission> missions;
+    private Set<MissionImpl> missions;
 
     public CommandoImpl(int id, String firstName, String lastName, double salary, Corps corps) {
         super(id, firstName, lastName, salary, corps);
@@ -13,12 +15,12 @@ public class CommandoImpl extends SpecialisedSoldierImpl implements Commando {
     }
 
     @Override
-    public void addMission(Mission mission) {
+    public void addMission(MissionImpl mission) {
         missions.add(mission);
     }
 
     @Override
-    public Collection<Mission> getMissions() {
+    public Collection<MissionImpl> getMissions() {
         return missions;
     }
 
@@ -29,8 +31,10 @@ public class CommandoImpl extends SpecialisedSoldierImpl implements Commando {
         sb.append(super.toString()).append(System.lineSeparator())
                 .append("Missions:");
 
-        for (Mission mission : missions) {
-            sb.append(System.lineSeparator()).append(mission);
+        for (MissionImpl mission : missions) {
+//            if(mission.state.equals(MissionState.INPROGRESS)) {
+                sb.append(System.lineSeparator()).append("  ").append(mission);
+//            }
         }
 
         return sb.toString();

@@ -1,5 +1,7 @@
 package militaryelite;
 
+import militaryelite.interfaces.Private;
+
 public class PrivateImpl extends SoldierImpl implements Private {
     private double salary;
 
@@ -16,6 +18,6 @@ public class PrivateImpl extends SoldierImpl implements Private {
     @Override
     public String toString() {
         return super.toString() +
-                String.format("Salary: %.2f", this.salary);
+                String.format(" Salary: %.2f", this.salary);
     }
 }

@@ -1,14 +1,16 @@
 package militaryelite;
 
 public enum MissionState {
-    INPROGRESS,
-    FINISHED;
+    INPROGRESS("inProgress"),
+    FINISHED("Finished");
 
-    public String getLable() {
-        if(this.name().equals("INPROGRESS")) {
-            return "inProgress";
-        } else {
-            return "finished";
-        }
+    String name;
+
+    MissionState(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }

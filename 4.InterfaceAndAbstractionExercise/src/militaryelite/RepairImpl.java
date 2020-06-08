@@ -1,18 +1,22 @@
 package militaryelite;
 
-public class Repair {
+import militaryelite.interfaces.Repair;
+
+public class RepairImpl implements Repair {
     String partName;
     int hoursWorked;
 
-    public Repair(String partName, int hoursWorked) {
+    public RepairImpl(String partName, int hoursWorked) {
         this.partName = partName;
         this.hoursWorked = hoursWorked;
     }
 
+    @Override
     public String getPartName() {
         return partName;
     }
 
+    @Override
     public int getHoursWorked() {
         return hoursWorked;
     }

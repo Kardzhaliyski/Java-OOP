@@ -1,4 +1,6 @@
-package militaryelite;
+package militaryelite.interfaces;
+
+import militaryelite.RepairImpl;
 
 import java.util.Collection;
 

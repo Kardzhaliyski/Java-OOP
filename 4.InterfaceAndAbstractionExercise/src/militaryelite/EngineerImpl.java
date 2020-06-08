@@ -1,17 +1,18 @@
 package militaryelite;
 
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import militaryelite.interfaces.Engineer;
+import militaryelite.interfaces.Repair;
+
+import java.util.*;
 
 public class EngineerImpl extends SpecialisedSoldierImpl implements Engineer {
-    Set<Repair> repairs;
+    List<Repair> repairs;
 
     public EngineerImpl(int id, String firstName, String lastName,
-                        double salary, Corps corps, Repair... repairsAr) {
+                        double salary, Corps corps) {
 
         super(id, firstName, lastName, salary, corps);
-        repairs = new LinkedHashSet<>();
+        repairs = new ArrayList<>();
     }
 
     @Override
@@ -31,7 +32,7 @@ public class EngineerImpl extends SpecialisedSoldierImpl implements Engineer {
                 .append("Repairs:");
 
         for (Repair repair : repairs) {
-            sb.append(System.lineSeparator()).append(repair.toString());
+            sb.append(System.lineSeparator()).append("  ").append(repair.toString());
         }
 
         return sb.toString();
