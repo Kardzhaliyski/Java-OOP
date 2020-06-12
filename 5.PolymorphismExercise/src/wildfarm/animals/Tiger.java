@@ -1,13 +1,14 @@
 package wildfarm.animals;
 
-import wildfarm.food.Food;
+import wildfarm.animals.abstractbases.Felime;
+import wildfarm.foods.Food;
 
 public class Tiger extends Felime {
-    public Tiger(String animalName, String animalType,
-                 Double animalWeight, String livingRegion) {
 
-        super(animalName, animalType, animalWeight, livingRegion);
+    public Tiger(String name, String type, Double weight, String livingRegion) {
+        super(name, type, weight, livingRegion);
     }
+
 
     @Override
     public void makeSound() {
@@ -16,10 +17,10 @@ public class Tiger extends Felime {
 
     @Override
     public void eat(Food food) {
-        if(food.getClass().getSimpleName().equals("Vegetable")) {
-            throw new IllegalArgumentException("Tigers are not eating that type of food!");
+        if(food.getType().getLabel().equals("Meat")) {
+            super.increaseFoodEaten(food);
         } else {
-            setFoodEaten(food.getQuantity());
+            throw new IllegalArgumentException("Tigers are not eating that type of food!");
         }
     }
 }

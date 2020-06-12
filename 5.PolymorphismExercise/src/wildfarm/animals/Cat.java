@@ -1,24 +1,26 @@
 package wildfarm.animals;
 
-import wildfarm.food.Food;
-
-import java.text.DecimalFormat;
+import wildfarm.animals.abstractbases.Felime;
+import wildfarm.foods.Food;
 
 public class Cat extends Felime {
     private String breed;
 
-    public Cat(String animalName, String animalType, Double animalWeight,
-               String livingRegion, String breed) {
-        super(animalName, animalType, animalWeight, livingRegion);
+    public Cat(String name, String type, Double weight, String livingRegion, String breed) {
+        super(name, type, weight, livingRegion);
         setBreed(breed);
     }
 
-    public String getBreed() {
-        return breed;
+    private void setBreed(String breed) {
+        if (breed == null || breed.trim().isEmpty()) {
+            throw new IllegalArgumentException("Breed cannot be null or empty!");
+        }
+
+        this.breed = breed;
     }
 
-    private void setBreed(String breed) {
-        this.breed = breed;
+    private String getBreed() {
+        return this.breed;
     }
 
     @Override
@@ -28,16 +30,16 @@ public class Cat extends Felime {
 
     @Override
     public void eat(Food food) {
-        setFoodEaten(food.getQuantity());
+        super.increaseFoodEaten(food);
     }
 
     @Override
     public String toString() {
         return String.format("%s[%s, %s, %s, %s, %d]",
-                getClass().getSimpleName(),
+                getAnimalType(),
                 getAnimalName(),
                 getBreed(),
-                new DecimalFormat("#.##").format(getAnimalWeight()),
+                formatter.format(getAnimalWeight()),
                 getLivingRegion(),
                 getFoodEaten());
     }
