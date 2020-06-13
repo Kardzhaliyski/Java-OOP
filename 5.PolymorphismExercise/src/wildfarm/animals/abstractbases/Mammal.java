@@ -16,7 +16,7 @@ public abstract class Mammal extends AnimalImpl {
         return livingRegion;
     }
 
-    public void setLivingRegion(String livingRegion) {
+    protected void setLivingRegion(String livingRegion) {
         if(livingRegion == null || livingRegion.trim().isEmpty()) {
             throw new IllegalArgumentException("Living region cannot be null or empty!");
         }

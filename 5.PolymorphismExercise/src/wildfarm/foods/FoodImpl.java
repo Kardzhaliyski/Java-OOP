@@ -1,6 +1,6 @@
 package wildfarm.foods;
 
-public class FoodImpl implements Food {
+public abstract class FoodImpl implements Food {
 
     private FoodType type;
     private Integer quantity;
