@@ -1,7 +1,7 @@
 package utilities.loggers.appenders;
 
 import utilities.loggers.enums.ReportLevel;
-import utilities.loggers.layouts.Layout;
+import utilities.loggers.appenders.layouts.Layout;
 import utilities.loggers.reports.Report;
 
 import java.io.BufferedWriter;
@@ -29,21 +29,29 @@ public class FileAppender implements Appender {
     }
 
     @Override
-    public void append(Report report) {
-        try (BufferedWriter writer =
-                     Files.newBufferedWriter(
-                             file.toPath(), StandardOpenOption.CREATE,
-                             StandardOpenOption.APPEND)) {
+    public void setReportLevel(ReportLevel reportLevel) {
+        this.reportLevel = reportLevel;
+    }
 
-            messagesAppended++;
+    @Override
+    public ReportLevel getReportLevel() {
+        return reportLevel;
+    }
+
+    @Override
+    public void append(Report report) {
+        try (BufferedWriter writer = Files.newBufferedWriter(
+                file.toPath(),
+                StandardOpenOption.CREATE,
+                StandardOpenOption.APPEND)) {
 
             String formattedMessage = layout.format(report);
-
-            this.addToSizeCount(this.sizeCounter(formattedMessage));
 
             writer.write(formattedMessage);
             writer.newLine();
 
+            this.addToSizeCount(this.sizeCounter(formattedMessage));
+            messagesAppended++;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -63,16 +71,6 @@ public class FileAppender implements Appender {
         }
 
         return counter;
-    }
-
-    @Override
-    public void setReportLevel(ReportLevel reportLevel) {
-        this.reportLevel = reportLevel;
-    }
-
-    @Override
-    public ReportLevel getReportLevel() {
-        return reportLevel;
     }
 
     @Override

@@ -2,7 +2,7 @@ package utilities.loggers.helpers;
 
 import utilities.loggers.appenders.*;
 import utilities.loggers.enums.*;
-import utilities.loggers.layouts.*;
+import utilities.loggers.appenders.layouts.*;
 import utilities.loggers.reports.*;
 
 public class Parser {

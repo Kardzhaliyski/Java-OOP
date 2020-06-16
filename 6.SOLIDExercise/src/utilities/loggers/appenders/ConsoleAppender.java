@@ -1,7 +1,7 @@
 package utilities.loggers.appenders;
 
 import utilities.loggers.enums.ReportLevel;
-import utilities.loggers.layouts.Layout;
+import utilities.loggers.appenders.layouts.Layout;
 import utilities.loggers.reports.Report;
 
 public class ConsoleAppender implements Appender {
