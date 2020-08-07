@@ -1,4 +1,4 @@
-package logger.appenders.enums;
+package utilities.loggers.enums;
 
 public enum ReportLevel {
     INFO,
