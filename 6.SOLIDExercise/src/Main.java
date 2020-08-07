@@ -23,16 +23,14 @@ public class Main {
 
                 Appender appender;
                 if(tokens.length == 4) {
-                    String filePath = tokens[2];
+                    String filePath = tokens[3];
                     appender = Parser.newAppender(appenderType, layout,filePath);
                 } else {
                     appender = Parser.newAppender(appenderType, layout);
                 }
 
-                if(tokens.length == 3) {
+                if(tokens.length >= 3) {
                     appender.setReportLevel(ReportLevel.valueOf(tokens[2].toUpperCase()));
-                } else if (tokens.length == 4) {
-                    appender.setReportLevel(ReportLevel.valueOf(tokens[3].toUpperCase()));
                 }
 
                 logger.addAppender(appender);
