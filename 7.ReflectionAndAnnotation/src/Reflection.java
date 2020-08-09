@@ -1,5 +1,6 @@
 import java.io.Serializable;
 
+@Subject(categories = {"Horror", "Reflect"})
 public class Reflection implements Serializable {
 
     private static final String nickName = "Pinguin";
@@ -28,7 +29,7 @@ public class Reflection implements Serializable {
         this.setEmail(email);
         this.setZip(2300);
     }
-
+@Author(name = "Pesho")
     public final String getName() {
         return name;
     }
@@ -48,7 +49,7 @@ public class Reflection implements Serializable {
     public String getEmail() {
         return email;
     }
-
+@Author(name = "Gosho")
     public void setEmail(String email) {
         this.email = email;
     }
