@@ -1,60 +1,36 @@
 package harvestingFields;
 
+import com.sun.source.tree.ModifiersTree;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.module.ModuleDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
 public class Main {
     public static void main(String[] args) {
-        try (BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
-            Class<?> richSoilLand = RichSoilLand.class;
-            StringBuilder sb = new StringBuilder();
+        try(BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
 
-            var modifierTypeToPrint = "";
-            while (!"HARVEST".equals(modifierTypeToPrint = bfr.readLine())) {
+            var richSoilClazz = RichSoilLand.class;
 
-                for (Field declaredField : richSoilLand.getDeclaredFields()) {
-                    switch (modifierTypeToPrint) {
-                        case "private": {
-                            if (Modifier.isPrivate(declaredField.getModifiers())) {
-                                appendFieldData(sb, declaredField);
-                            }
-                            break;
-                        }
-                        case "protected": {
-                            if (Modifier.isProtected(declaredField.getModifiers())) {
-                                appendFieldData(sb, declaredField);
-                            }
-                            break;
-                        }
-                        case "public": {
-                            if (Modifier.isPublic(declaredField.getModifiers())) {
-                                appendFieldData(sb, declaredField);
-                            }
-                            break;
-                        }
-                        case "all": {
-                            appendFieldData(sb, declaredField);
-                            break;
-                        }
+            String fieldType;
+            while (!"HARVEST".equals(fieldType = bfr.readLine())) {
+                for (Field field : richSoilClazz.getDeclaredFields()) {
+                    if (!Modifier.toString(field.getModifiers()).equals(fieldType) && !fieldType.equals("all")) {
+                        continue;
                     }
+
+                    System.out.printf("%s %s %s%n",
+                            Modifier.toString(field.getModifiers()),
+                            field.getType().getSimpleName(),
+                            field.getName());
                 }
             }
 
-            System.out.println(sb.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private static void appendFieldData(StringBuilder sb, Field declaredField) {
-        if (sb.length() != 0) {
-            sb.append(System.lineSeparator());
-        }
-        sb.append(Modifier.toString(declaredField.getModifiers()));
-        sb.append(" ").append(declaredField.getType().getSimpleName());
-        sb.append(" ").append(declaredField.getName());
     }
 }
