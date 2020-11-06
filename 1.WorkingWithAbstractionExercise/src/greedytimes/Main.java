@@ -9,12 +9,14 @@ public class Main {
         try(BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in))) {
             long capacity = Long.parseLong(bfr.readLine());
             Bag bag = new Bag(capacity);
+
             String[] safeContent = bfr.readLine().split("\\s+");
 
             for (int i = 0; i < safeContent.length; i += 2) {
                 String itemName = safeContent[i];
                 long quantity = Long.parseLong(safeContent[i + 1]);
 
+               
                 if(itemName.length() < 3) {
                     continue;
                 } else if (Identifier.isCash(itemName)) {
