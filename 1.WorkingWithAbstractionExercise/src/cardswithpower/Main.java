@@ -20,5 +20,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        CardRank.valueOf("Two".toUpperCase());
+
     }
 }
