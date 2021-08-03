@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9986170-2d81-4967-8b23-bb2527aa2e62" name="Default Changelist" comment="Revert to older version" />
+    <list default="true" id="b9986170-2d81-4967-8b23-bb2527aa2e62" name="Default Changelist" comment="Updating gitIgnore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +86,7 @@
       <updated>1628017871510</updated>
       <workItem from="1628017874497" duration="220000" />
       <workItem from="1628018651066" duration="85000" />
-      <workItem from="1628020323694" duration="86000" />
+      <workItem from="1628020323694" duration="212000" />
     </task>
     <task id="LOCAL-00001" summary="Revert to older version">
       <created>1628018043519</created>
@@ -102,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628018692343</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updating gitIgnore">
+      <created>1628020471345</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628020471345</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +129,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Revert to older version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert to older version" />
+    <MESSAGE value="Updating gitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating gitIgnore" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="486" key="GridCell.Tab.0.bottom" timestamp="1628018098053">
@@ -145,9 +153,9 @@
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
     <state x="256" y="458" key="SettingsEditor/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628020410910" />
-    <state x="368" y="613" key="Vcs.Push.Dialog.v2" timestamp="1628018703636">
+    <state x="368" y="613" key="Vcs.Push.Dialog.v2" timestamp="1628020484654">
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
-    <state x="368" y="613" key="Vcs.Push.Dialog.v2/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628018703636" />
+    <state x="368" y="613" key="Vcs.Push.Dialog.v2/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628020484654" />
   </component>
 </project>
