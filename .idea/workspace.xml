@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9986170-2d81-4967-8b23-bb2527aa2e62" name="Default Changelist" comment="Updating gitIgnore" />
+    <list default="true" id="b9986170-2d81-4967-8b23-bb2527aa2e62" name="Default Changelist" comment="Updating gitIgnore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.WorkingWithAbstractionExercise/src/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,9 +40,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="file.status.colors" />
   </component>
   <component name="RunManager">
@@ -52,17 +55,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,6 +79,9 @@
       <workItem from="1628017874497" duration="220000" />
       <workItem from="1628018651066" duration="85000" />
       <workItem from="1628020323694" duration="212000" />
+      <workItem from="1628020862884" duration="347000" />
+      <workItem from="1628021232218" duration="44000" />
+      <workItem from="1628021354772" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="Revert to older version">
       <created>1628018043519</created>
@@ -149,10 +144,10 @@
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
     <state width="1493" height="486" key="GridCell.Tab.0.right/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628018098053" />
-    <state x="256" y="458" key="SettingsEditor" timestamp="1628020410910">
+    <state x="256" y="458" key="SettingsEditor" timestamp="1628021271280">
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
-    <state x="256" y="458" key="SettingsEditor/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628020410910" />
+    <state x="256" y="458" key="SettingsEditor/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628021271280" />
     <state x="368" y="613" key="Vcs.Push.Dialog.v2" timestamp="1628020484654">
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
