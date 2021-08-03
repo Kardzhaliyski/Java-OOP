@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1.WorkingWithAbstraction/1.WorkingWithAbstraction.iml" filepath="$PROJECT_DIR$/1.WorkingWithAbstraction/1.WorkingWithAbstraction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1.WorkingWithAbstractionExercise/1.WorkingWithAbstractionExercise.iml" filepath="$PROJECT_DIR$/1.WorkingWithAbstractionExercise/1.WorkingWithAbstractionExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2.Inheritance/2.Inheritance.iml" filepath="$PROJECT_DIR$/2.Inheritance/2.Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2.InheritanceExercise/2.InheritanceExercise.iml" filepath="$PROJECT_DIR$/2.InheritanceExercise/2.InheritanceExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.Encapsulation/3.Encapsulation.iml" filepath="$PROJECT_DIR$/3.Encapsulation/3.Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.EncapsulationExercise/3.EncapsulationExercise.iml" filepath="$PROJECT_DIR$/3.EncapsulationExercise/3.EncapsulationExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.InterfaceAndAbstraction/4.InterfaceAndAbstraction.iml" filepath="$PROJECT_DIR$/4.InterfaceAndAbstraction/4.InterfaceAndAbstraction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.InterfaceAndAbstractionExercise/4.InterfaceAndAbstractionExercise.iml" filepath="$PROJECT_DIR$/4.InterfaceAndAbstractionExercise/4.InterfaceAndAbstractionExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5.Polymorphism/5.Polymorphism.iml" filepath="$PROJECT_DIR$/5.Polymorphism/5.Polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5.PolymorphismExercise/5.PolymorphismExercise.iml" filepath="$PROJECT_DIR$/5.PolymorphismExercise/5.PolymorphismExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.SOLIDExercise/6.SOLIDExercise.iml" filepath="$PROJECT_DIR$/6.SOLIDExercise/6.SOLIDExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7.ReflectionAndAnnotation/7.ReflectionAndAnnotation.iml" filepath="$PROJECT_DIR$/7.ReflectionAndAnnotation/7.ReflectionAndAnnotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7.ReflectionAndAnnotationExercise/7.ReflectionAndAnnotationExercise.iml" filepath="$PROJECT_DIR$/7.ReflectionAndAnnotationExercise/7.ReflectionAndAnnotationExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java-OOP.iml" filepath="$PROJECT_DIR$/.idea/Java-OOP.iml" />
+    </modules>
+  </component>
+</project>
