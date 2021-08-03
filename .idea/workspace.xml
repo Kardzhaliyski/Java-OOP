@@ -40,6 +40,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="file.status.colors" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -55,6 +56,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -62,6 +74,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Zdravko\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b9986170-2d81-4967-8b23-bb2527aa2e62" name="Default Changelist" comment="" />
@@ -71,6 +86,7 @@
       <updated>1628017871510</updated>
       <workItem from="1628017874497" duration="220000" />
       <workItem from="1628018651066" duration="85000" />
+      <workItem from="1628020323694" duration="86000" />
     </task>
     <task id="LOCAL-00001" summary="Revert to older version">
       <created>1628018043519</created>
@@ -125,10 +141,10 @@
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
     <state width="1493" height="486" key="GridCell.Tab.0.right/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628018098053" />
-    <state x="256" y="458" key="SettingsEditor" timestamp="1628018032486">
+    <state x="256" y="458" key="SettingsEditor" timestamp="1628020410910">
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
-    <state x="256" y="458" key="SettingsEditor/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628018032486" />
+    <state x="256" y="458" key="SettingsEditor/0.40.3072.1688/3840.0.1920.1040@0.40.3072.1688" timestamp="1628020410910" />
     <state x="368" y="613" key="Vcs.Push.Dialog.v2" timestamp="1628018703636">
       <screen x="0" y="40" width="3072" height="1688" />
     </state>
