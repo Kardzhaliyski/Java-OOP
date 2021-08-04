@@ -1,8 +1,7 @@
 import utilities.loggers.*;
 import utilities.loggers.appenders.*;
-import utilities.loggers.enums.ReportLevel;
-import utilities.loggers.helpers.Parser;
 import utilities.loggers.appenders.layouts.*;
+import utilities.loggers.helpers.Parser;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

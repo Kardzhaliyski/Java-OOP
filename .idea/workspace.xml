@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9986170-2d81-4967-8b23-bb2527aa2e62" name="Default Changelist" comment="Updating gitIgnore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.WorkingWithAbstractionExercise/src/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="b9986170-2d81-4967-8b23-bb2527aa2e62" name="Default Changelist" comment="Updating gitIgnore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +79,7 @@
       <workItem from="1628020862884" duration="347000" />
       <workItem from="1628021232218" duration="44000" />
       <workItem from="1628021354772" duration="47000" />
+      <workItem from="1628021468329" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="Revert to older version">
       <created>1628018043519</created>
